@@ -17,19 +17,19 @@ for c in commands:
     print(f"Direction: {direction}")
     print(f"Value: {value}")
 
-    if direction == "R": 
-        pointer += int(c[1:])%100
-    else: 
-        pointer -= int(c[1:])%100
+    if direction == "R":
+        pointer += int(c[1:]) % 100
+    else:
+        pointer -= int(c[1:]) % 100
 
     print(f"Result: {pointer}")
 
-    if(pointer < 0): 
+    if (pointer < 0):
         pointer += 100
-    elif(pointer >= 100):
+    elif (pointer >= 100):
         pointer -= 100
 
-    if(pointer == 0): 
+    if (pointer == 0):
         onZeroCounter += 1
         print(f"onZeroCounter: {onZeroCounter}")
 

@@ -1,8 +1,8 @@
 ### Init Helper Objects ###
-commands:           list[str]   = []
-pointer:            int         = 50
-onZeroCounter:      int         = 0
-overZeroCounter:    int         = 0
+commands:           list[str] = []
+pointer:      int = 50
+onZeroCounter:      int = 0
+overZeroCounter:    int = 0
 
 ### Read Puzzle Input ###
 with open("Days/Day1.txt") as f:
@@ -18,22 +18,22 @@ for c in commands:
 
     overZeroCounter += factor
 
-    if direction == "R": 
-        pointer += int(c[1:])%100
-    else: 
-        pointer -= int(c[1:])%100
+    if direction == "R":
+        pointer += int(c[1:]) % 100
+    else:
+        pointer -= int(c[1:]) % 100
 
-    if(pointer < 0): 
+    if (pointer < 0):
         pointer += 100
-        if(prevPointer > 0):
+        if (prevPointer > 0):
             overZeroCounter += 1
-    elif(pointer > 100):
+    elif (pointer > 100):
         pointer -= 100
-        if(prevPointer > 0):
+        if (prevPointer > 0):
             overZeroCounter += 1
-    elif(pointer == 0):
+    elif (pointer == 0):
         onZeroCounter += 1
-    elif(pointer == 100):
+    elif (pointer == 100):
         onZeroCounter += 1
         pointer -= 100
 

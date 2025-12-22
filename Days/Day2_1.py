@@ -1,5 +1,3 @@
-import re
-
 ids: list[tuple[int, int]] = []
 result = 0
 
@@ -19,8 +17,9 @@ for id in ids:
     for i in range(id[0], (id[1] + 1)):
         idAsString = str(i)
         length = len(idAsString)
-        if length%2 == 0: 
+        if length % 2 == 0:
             left, right = idAsString[:length//2], idAsString[length//2:]
-            if left == right: result += i
+            if left == right:
+                result += i
 
 print(f"Result: {result}")
